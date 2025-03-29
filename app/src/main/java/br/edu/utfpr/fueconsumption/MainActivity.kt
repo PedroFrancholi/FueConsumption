@@ -87,6 +87,6 @@ class MainActivity : AppCompatActivity() {
         etValor2.setText("")
         etConsumo1.setText("")
         etConsumo2.setText("")
-        tvResultado.setText("Resultado:")
+        tvResultado.setText("Resultado: ")
     }
 }
