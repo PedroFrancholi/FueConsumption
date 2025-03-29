@@ -73,18 +73,10 @@ class MainActivity : AppCompatActivity() {
         if (it.resultCode == RESULT_OK) {
             val codRetorno = it.data?.getIntExtra("codRetorno", 0)
             if (codRetorno == 9) {
-                if (etConsumo1.text.isNotEmpty()) {
-                    Toast.makeText(this, "Você já selecionou este combustivel no outro campo", Toast.LENGTH_SHORT).show()
-                    return@registerForActivityResult
-                }
                 etConsumo1.setText("$codRetorno")
             }
 
             else if (codRetorno == 12) {
-                if (etConsumo2.text.isNotEmpty()) {
-                    Toast.makeText(this, "Você já selecionou este combustivel no outro campo", Toast.LENGTH_SHORT).show()
-                    return@registerForActivityResult
-                }
                 etConsumo2.setText("$codRetorno")
             }
         }
