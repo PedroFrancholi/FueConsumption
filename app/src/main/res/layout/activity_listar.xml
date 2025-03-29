@@ -27,4 +27,5 @@
         android:entries="@array/combustiveis"
         tools:context=".ListarActivity" />
 
+
 </LinearLayout>
