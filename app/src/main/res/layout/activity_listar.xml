@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#003800"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/txtTituloLista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/escolha_o_combust_vel"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_width="352dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:layout_marginBottom="20dp"/>
+        android:text="@string/escolha_o_combust_vel"
+        android:textColor="#A7D5A7"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/lvCombustiveis"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@drawable/lista_background"
         android:entries="@array/combustiveis"
-        android:background="@color/white"
-        tools:context=".ListarActivity"
-        />
+        tools:context=".ListarActivity" />
 
 </LinearLayout>

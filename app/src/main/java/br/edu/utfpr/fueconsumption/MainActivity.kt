@@ -73,11 +73,10 @@ class MainActivity : AppCompatActivity() {
         if (it.resultCode == RESULT_OK) {
             val codRetorno = it.data?.getIntExtra("codRetorno", 0)
             if (codRetorno == 9) {
-                etConsumo1.setText("$codRetorno")
+                etConsumo1.setText(getString(R.string.cod_retorno_eta, codRetorno))
             }
-
             else if (codRetorno == 12) {
-                etConsumo2.setText("$codRetorno")
+                etConsumo2.setText(getString(R.string.cod_retorno_gas, codRetorno))
             }
         }
     }
