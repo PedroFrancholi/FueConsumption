@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/consumoGasolinaLayout"
+        android:id="@+id/consumoComb1Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -36,25 +36,25 @@
             android:layout_weight="1"
             android:hint="@string/consumo_comb_1"
             android:inputType="numberDecimal"
-            android:padding="10dp"/>
+            android:padding="10dp" />
 
         <Button
-            android:id="@+id/btnBuscarGasolina"
+            android:id="@+id/btBuscarComb1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/buscar_comb_1"
-            android:backgroundTint="#007B03"
             android:layout_marginStart="10dp"
+            android:backgroundTint="#007B03"
+            android:onClick="btListarOnClick"
             android:padding="10dp"
-            android:onClick="btListarOnClick"/>
+            android:text="@string/buscar_comb_1" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/consumoAlcoolLayout"
+        android:id="@+id/consumoComb2Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/consumoGasolinaLayout"
+        app:layout_constraintTop_toBottomOf="@id/consumoComb1Layout"
         android:layout_marginTop="20dp">
 
         <EditText
@@ -67,7 +67,7 @@
             android:padding="10dp"/>
 
         <Button
-            android:id="@+id/btFirstBuscar"
+            android:id="@+id/btBuscarComb2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/buscar_comb_2"
@@ -86,7 +86,7 @@
         android:inputType="numberDecimal"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/consumoAlcoolLayout" />
+        app:layout_constraintTop_toBottomOf="@id/consumoComb2Layout" />
 
     <EditText
         android:id="@+id/etValor2"
@@ -99,7 +99,7 @@
         android:layout_marginTop="20dp"/>
 
     <Button
-        android:id="@+id/btnCalcular"
+        android:id="@+id/btCalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/calcular_melhor_combust_vel"
@@ -120,7 +120,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCalcular" />
+        app:layout_constraintTop_toBottomOf="@id/btCalcular" />
 
     <ImageView
         android:id="@+id/iconGasStation"
@@ -132,7 +132,7 @@
         app:srcCompat="@drawable/baseline_local_gas_station_24" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btLimpar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"

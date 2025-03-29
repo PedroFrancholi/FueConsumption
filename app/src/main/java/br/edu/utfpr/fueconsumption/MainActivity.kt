@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         etValor2 = findViewById( R.id.etValor2 )
         tvResultado = findViewById(R.id.tvResultado)
 
-        val btnCalcular: Button = findViewById(R.id.btnCalcular)
+        val btnCalcular: Button = findViewById(R.id.btCalcular)
         btnCalcular.setOnClickListener {
             calcularMelhorCombustivel()
         }
