@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FueConsumption</string>
+    <string name="valor_comb_2">Valor Combustivel 1 (R$)</string>
+    <string name="valor_comb_1">Valor Combustivel 2 (R$)</string>
+    <string name="calcular_melhor_combust_vel">Calcular Consumo</string>
+    <string name="resultado">Resultado:</string>
+    <string name="buscar_comb_2">Buscar</string>
+    <string name="consumo_comb_1">Consumo Combustivel 1 (km/l)</string>
+    <string name="buscar_comb_1">Buscar</string>
+    <string name="consumo_comb_2">Consumo Combustivel 2 (km/l)</string>
+    <string name="calcular_comb">Calcular Consumo</string>
+    <string name="calcular">Calcular</string>
+    <string name="logo">Logo</string>
+    <string name="escolha_o_combust_vel">Escolha o Combustível</string>
+    <string name="limpar">Limpar</string>
+</resources>

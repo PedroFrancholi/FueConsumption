@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/calcular_comb"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#007B03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/consumoGasolinaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etConsumo1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/consumo_comb_1"
+            android:inputType="numberDecimal"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnBuscarGasolina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar_comb_1"
+            android:backgroundTint="#007B03"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:onClick="btListarOnClick"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/consumoAlcoolLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/consumoGasolinaLayout"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etConsumo2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/consumo_comb_2"
+            android:inputType="numberDecimal"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btFirstBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar_comb_2"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#007B03"
+            android:padding="10dp"
+            android:onClick="btListarOnClick"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etValor1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/valor_comb_2"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consumoAlcoolLayout" />
+
+    <EditText
+        android:id="@+id/etValor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/valor_comb_1"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/etValor1"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular_melhor_combust_vel"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etValor2"
+        android:backgroundTint="#007B03"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/resultado"
+        android:textColor="#007B03"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCalcular" />
+
+    <ImageView
+        android:id="@+id/iconGasStation"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitulo"
+        app:srcCompat="@drawable/baseline_local_gas_station_24" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="@string/limpar"
+        android:backgroundTint="#007Ba3"
+        android:onClick="btLimparOnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
