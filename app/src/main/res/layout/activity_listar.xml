@@ -13,7 +13,7 @@
         android:layout_height="63dp"
         android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:text="@string/escolha_o_combust_vel"
+        android:text="@string/selecione_comb"
         android:textColor="#A7D5A7"
         android:textSize="20sp"
         android:textStyle="bold" />

@@ -26,15 +26,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
-        android:layout_marginTop="20dp">
+        app:layout_constraintTop_toBottomOf="@+id/tvComb1"
+        tools:layout_editor_absoluteX="20dp">
 
         <EditText
             android:id="@+id/etConsumo1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/consumo_comb_1"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:padding="10dp" />
@@ -55,15 +54,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/consumoComb1Layout"
-        android:layout_marginTop="20dp">
+        app:layout_constraintTop_toBottomOf="@+id/tvComb2"
+        tools:layout_editor_absoluteX="20dp">
 
         <EditText
             android:id="@+id/etConsumo2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/consumo_comb_2"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:padding="10dp" />
@@ -72,37 +70,33 @@
             android:id="@+id/btBuscarComb2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/buscar_comb_2"
             android:layout_marginStart="10dp"
             android:backgroundTint="#007B03"
+            android:onClick="btListar2OnClick"
             android:padding="10dp"
-            android:onClick="btListar2OnClick"/>
+            android:text="@string/buscar_comb_2" />
     </LinearLayout>
 
     <EditText
         android:id="@+id/etValor1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/valor_comb_2"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/consumoComb1Layout"
-        app:layout_constraintTop_toBottomOf="@id/consumoComb2Layout" />
+        app:layout_constraintTop_toBottomOf="@+id/tvValorComb1" />
 
     <EditText
         android:id="@+id/etValor2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/valor_comb_1"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:padding="10dp"
         app:layout_constraintStart_toStartOf="@+id/consumoComb1Layout"
-        app:layout_constraintTop_toBottomOf="@id/etValor1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
         android:id="@+id/btCalcular"
@@ -111,7 +105,7 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="#007B03"
         android:padding="10dp"
-        android:text="@string/calcular_melhor_combust_vel"
+        android:text="@string/bt_calcular_comb"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/consumoComb1Layout"
         app:layout_constraintTop_toBottomOf="@id/etValor2" />
@@ -151,5 +145,45 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+    <TextView
+        android:id="@+id/tvComb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/consumo_comb_1"
+        android:textColor="#007B03"
+        app:layout_constraintStart_toStartOf="@+id/consumoComb1Layout"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tvComb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/consumo_comb_2"
+        android:textColor="#007B03"
+        app:layout_constraintStart_toStartOf="@+id/consumoComb2Layout"
+        app:layout_constraintTop_toBottomOf="@+id/consumoComb1Layout" />
+
+    <TextView
+        android:id="@+id/tvValorComb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/valor_comb_1"
+        android:textColor="#007B03"
+        app:layout_constraintStart_toStartOf="@+id/etValor1"
+        app:layout_constraintTop_toBottomOf="@+id/consumoComb2Layout" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/valor_comb_2"
+        android:textColor="#007B03"
+        app:layout_constraintStart_toStartOf="@+id/etValor2"
+        app:layout_constraintTop_toBottomOf="@+id/etValor1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
