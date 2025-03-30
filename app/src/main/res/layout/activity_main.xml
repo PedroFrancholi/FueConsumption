@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:backgroundTint="#007B03"
-            android:onClick="btListarOnClick"
+            android:onClick="btListar1OnClick"
             android:padding="10dp"
             android:text="@string/buscar_comb_1" />
     </LinearLayout>
@@ -76,7 +76,7 @@
             android:layout_marginStart="10dp"
             android:backgroundTint="#007B03"
             android:padding="10dp"
-            android:onClick="btListarOnClick"/>
+            android:onClick="btListar2OnClick"/>
     </LinearLayout>
 
     <EditText

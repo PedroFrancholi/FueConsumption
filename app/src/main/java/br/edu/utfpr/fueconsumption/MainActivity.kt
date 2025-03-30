@@ -62,22 +62,31 @@ class MainActivity : AppCompatActivity() {
         tvResultado.text = melhorCombustivel
     }
 
-    fun btListarOnClick(view: View) {
+    fun btListar1OnClick(view: View) {
         val intent = Intent(this, ListarActivity::class.java)
-        getResult.launch(intent)
+        getResult1.launch(intent)
     }
 
-    private val getResult = registerForActivityResult(
+    fun btListar2OnClick(view: View) {
+        val intent = Intent(this, ListarActivity::class.java)
+        getResult2.launch(intent)
+    }
+
+    private val getResult1 = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) {
         if (it.resultCode == RESULT_OK) {
             val codRetorno = it.data?.getIntExtra("codRetorno", 0)
-            if (codRetorno == 9) {
-                etConsumo1.setText(getString(R.string.cod_retorno_eta, codRetorno))
-            }
-            else if (codRetorno == 12) {
-                etConsumo2.setText(getString(R.string.cod_retorno_gas, codRetorno))
-            }
+            etConsumo1.setText("$codRetorno")
+        }
+    }
+
+    private val getResult2 = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+        if (it.resultCode == RESULT_OK) {
+            val codRetorno = it.data?.getIntExtra("codRetorno", 0)
+            etConsumo2.setText("$codRetorno")
         }
     }
 

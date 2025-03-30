@@ -13,6 +13,6 @@
     <string name="logo">Logo</string>
     <string name="escolha_o_combust_vel">Escolha o Combustível</string>
     <string name="limpar">Limpar</string>
-    <string name="cod_retorno_gas">Gasolina - %1$d Km/l</string>
-    <string name="cod_retorno_eta">Alcool - %1$dKm/l</string>
+    <string name="cod_retorno_comb1">Combustível 1 - %1$d Km/l</string>
+    <string name="cod_retorno_comb2">Combustível 2 - %1$dKm/l</string>
 </resources>
